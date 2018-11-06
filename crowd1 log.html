@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    
+    <style>
+        body{background-color:#787878}.btn_log,.login_content{background-color:#00c347}.color_text_2{color:#787878}.form_wrap,.login_content,.login_wrap{overflow:hidden;padding:68px 0}.btn_wrap{padding:12px;overflow:hidden}.login_content{color:#787878;text-align:center;border-radius:6px;box-shadow:0 0 10px 0 rgba(0,0,0,.12)}.input-form{width:64%;padding:12px 2%;font-size:14px;line-height:15px;border:1px solid #b9b9b9;border-radius:7px;margin-bottom:8px}.form-control{display:inline-block}.font_size_600{font-size:16px;font-weight:600}.btn_log{padding:12px 40px;border-radius:6px}.signup_link{color:#00c347;font-size:18px}.signup_link:hover{text-decoration:none;color:#00c347}
+      </style>
+      <style>
+          .color_text{color:#fff}.color_text_2{color:#787878}.form_wrap,.login_content,.login_wrap{overflow:hidden;padding:68px 0}.bg_color{background-color:#fff}.btn_log,.login_content{background-color:#00c347}.btn_wrap{padding:12px;overflow:hidden}.login_content{color:#787878;text-align:center;border-radius:6px;box-shadow:0 0 10px 0 rgba(0,0,0,.12)}.input-form{width:64%;padding:12px 2%;font-size:14px;line-height:15px;border:1px solid #b9b9b9;border-radius:7px;margin-bottom:8px}.form-control{display:inline-block}.font_size_600{font-size:16px;font-weight:600}.btn_log{padding:12px 40px;border-radius:6px}.signup_link{color:#00c347;font-size:18px}.signup_link:hover{text-decoration:none;color:#00c347}footer{background-color:#101010;padding:10px 18px;font-size:12px;overflow:hidden}
+        </style>
+        <style>
+          .pad_account_inp{padding: 100px 200px 200px 200px;}  .card_profile_skills,.events_cont_wrap,.events_wrap,.kk_slider,.mob_logo,.navbar_list_wrap,.navbar_wrap,.news_feed,.news_feed img,.news_feed_pic,.news_feed_text,.news_feed_wrap,.send_btn_wrap{overflow:hidden}.kk_slider,.kk_slider_blocks,.premium-pack{box-sizing:border-box}body{background-color:#9adff9}.bg_color{background-color:#fff}.bg_color_2{background-color:#ff8f00}.navbar_wrap{margin:8px 0}.navbar_list_ul{margin:0;padding:0;list-style-type:none}.navbar_list_wrap{text-align:center;float:right}.float_left,ul.navbar_list_ul>li{float:left}.color_text{color:#fff}.color_text_2{color:#ff8f00}.color_text_3{color:#787878}.nav_top_text{display:block;padding:12px 20px;text-decoration:none!important;font-size:12px;text-align:center;height:42px;min-width:42px;margin-right:-1px;cursor:pointer}.container_nav_wrap{width:100%;z-index:99999;box-shadow:0 0 16px 0 rgba(0,0,0,.34);position:fixed}.nav_top_text:hover{color:#eb0028;border-bottom:2px solid #eb0028}.no_display{display:none}.hover_container,.kk_slider_blocks,.mob_logo{display:inline-block}.mob_logo{margin-top:8px}.mob_logo:hover{text-decoration:none;color:#fff}.fa-user-circle{font-size:28px}.fa-search,.work_title{font-size:18px}.account_name{margin-left:12px;padding-bottom:10px}.padding_section,.profile_card_wrap,.sec2_wrap{overflow:hidden;padding:12px}.profile_card_wrap{position:relative;background-color:#fff;text-align:left;border-radius:4px;font-size:12px;margin:24px 0;box-shadow:0 0 10px 0 rgba(0,0,0,.12)}.card_name_pic img{border-radius:50%;border:2px solid transparent;width:70px;height:auto;margin-top:10px}.card_name_pic,.text_center{text-align:center}.card_name_info{border-right:1px solid #ddd;text-align:left}.fa-certificate{color:#3a3adb}.msg_btn{border:1px solid #ff8f00;border-radius:9px;padding:12px;cursor:pointer}.event_head{padding:8px;border-bottom:1px solid #ddd;margin:6px 0}.events_cont_wrap{padding:4px;border-bottom:1px solid #ddd}.news_feed img{border-radius:50%;border:2px solid transparent;width:40px;height:auto;margin-left:6px}.news_feed_pic{width:10%}.news_feed_text{width:90%}.news_feed_wrap{padding:14px 6px;border-radius:4px}.card_profile_skills,.work_title{padding:10px 0}.full_time_btn{border:1px solid #ff8f00;border-radius:4px;padding:4px;margin-right:8px}.profile_comment,.profile_like{margin-left:10px;cursor:pointer}.hover_col_wrap{padding-top:18px;text-align:center;background-color:#ff8f00;border-radius:4px}.hover03 figure img{transform:scale(.9);transition:.3s ease-in-out}.hover03 figure:hover img{transform:scale(1)}.fa-comment-alt,.fa-thumbs-up{margin-right:4px}.kk_slider{width:100%;position:relative;margin-bottom:10px;margin-top:10px;border:2px solid #fff;background-color:#fff}.kk_slider_blocks{width:152px;position:relative;padding:12px;border-radius:4px;color:#383838!important;margin:0 10px;text-align:left;border:1px solid #d4d4d4;float:left;text-decoration:none!important}a.kk_slider_blocks:hover{background-color:#cbe2f0}.slider_title{margin-bottom:10px;text-align:center}.slider_title img{display:inline-block!important}button.slick-arrow{display:block;font-size:0;position:absolute;top:50%;z-index:2;background:#000;padding:10px 8px;border-radius:4px;color:#333;box-shadow:1.5px 2.6px 5px 0 rgba(120,120,120,.184);width:auto;margin-top:-30px;cursor:pointer;border:0;user-select:none;outline:0}.premium-pack,.slick-list,.slick-track{position:relative;overflow:hidden}.slick-prev{left:0}.slick-prev:before{content:"❮";color:#fff;font-size:30px}.slick-next{right:0}.slick-next:after{content:"❯";color:#fff;font-size:30px}.premium-pack{width:100%;padding:0 44px!important;margin-bottom:10px;margin-top:10px;border:2px solid #fff;background-color:#fff}.slick-list{display:block;margin:0;padding:0!important}.slick-track{top:0;left:0;display:block;margin-left:auto;margin-right:auto}.friends_btn_follow,.friends_btn_hire{padding:2px 5px;border-radius:4px;margin:0 2px}.slick-track:after,.slick-track:before{display:table;content:''}.friends_btn_follow{background-color:#a5e9ae}.friends_btn_hire{background-color:#8a2be2}footer{background-color:#101010;padding:10px 18px;font-size:12px;overflow:hidden}@media only screen and (max-width:768px){.pad_account_inp{padding:0px;}.nav_list_none{display:none}.card_name_info{border:0;text-align: center;}.msg_btn,.news_feed_wrap{margin-top:12px}.card_name_pic img{width:50px}.news_feed_pic{width:20%}.news_feed_text{width:80%}}
+        </style>
+</head>
+<body>
+    <div id="divWrap" style="overflow:hidden;">
+      <div id="div1" style="display: block;">
+        <div class="container_wrap bg_color">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12 pad_account_inp">
+                <div class="login_wrap">
+                  <div class="login_content">
+                    <div>
+                      <h2>Sign In</h2></div>
+                    <div class="form_wrap bg_color">
+                      <form class="needs-validation" novalidate>
+                        <div class="form-row">
+                          <div class="col-md-12 col-sm-12 col-xs-12">
+                            <label for="validationCustom01" class="font_size_600">User name</label>
+                            <input type="text" class="form-control input-form" id="validationCustom01" placeholder="User name" required>
+                            <div class="invalid-feedback font_size_600">
+                              Please choose a username.
+                            </div>
+                          </div>
+                          <div class="col-md-12 col-sm-12 col-xs-12">
+                            <label for="validationCustom01" class="font_size_600">Password</label>
+                            <input type="password" class="form-control input-form" id="validationCustom02" placeholder="password" required>
+                            <div class="invalid-feedback font_size_600">
+                              Please choose a Password.
+                            </div>
+                          </div>
+                        </div>
+                        <button class="btn btn-primary font_size_600" type="submit" onclick="show('div3')">Submit form</button>
+                      </form>
+                      <div style="margin-top:95px;">Don't have an account ?</div>
+                      <a href="javascript:void(0)" class="signup_link" onclick="show('div2')"><b>SIGN UP</b></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="div2" style="display: none;">
+        <div class="container_wrap bg_color">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12 pad_account_inp">
+                <div class="login_wrap">
+                  <div class="login_content">
+                    <div style="padding: 22px;">
+                      <h2>Sign Up</h2></div>
+                    <div class="form_wrap bg_color">
+                      <form class="needs-validation" novalidate>
+                        <div class="form-row">
+                          <div class="col-md-12 col-sm-12 col-xs-12">
+                            <label for="validationCustom01" class="font_size_600">First name</label>
+                            <input type="text" class="form-control input-form" id="validationCustom01" placeholder="First name" value="john" required>
+                            <div class="valid-feedback font_size_600">
+                              Looks good!
+                            </div>
+                          </div>
+                          <div class="col-md-12 col-sm-12 col-xs-12">
+                            <label for="validationCustom02" class="font_size_600">Last name</label>
+                            <input type="text" class="form-control input-form" id="validationCustom01" placeholder="Last name" value="Doe" required>
+                            <div class="valid-feedback font_size_600">
+                              Looks good!
+                            </div>
+                          </div>
+                          <div class="col-md-12 col-sm-12 col-xs-12">
+                            <label for="validationCustomUsername" class="font_size_600">User name</label>
+                            <input type="text" class="form-control input-form" id="validationCustomUsername" placeholder="User name" aria-describedby="inputGroupPrepend" required>
+                            <div class="invalid-feedback font_size_600">
+                              Please choose a User Name.
+                            </div>
+                          </div>
+                          <div class="col-md-12 col-sm-12 col-xs-12">
+                            <label for="validationCustom01" class="font_size_600">Password</label>
+                            <input type="password" class="form-control input-form" id="validationCustom02" placeholder="password" value="***" required>
+                            <div class="invalid-feedback font_size_600">
+                              Please choose a Password.
+                            </div>
+                          </div>
+                          <div class="col-md-12 col-sm-12 col-xs-12">
+                            <label for="validationCustom03" class="font_size_600">City</label>
+                            <input type="text" class="form-control input-form" id="validationCustom03" placeholder="City" required>
+                            <div class="invalid-feedback font_size_600">
+                              Please provide a valid city.
+                            </div>
+                          </div>
+  
+  
+                        </div>
+                        <button class="btn btn-primary font_size_600" type="submit">Submit form</button>
+                        <button class="btn btn-primary font_size_600" type="submit" onclick="show('div3')">View NewsFeed Page</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="div3" style="display:none;">
+        <!--sec-1  -->
+        <div class="container_nav_wrap bg_color_2">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="navbar_wrap">
+  
+                  <a href="javascript:void(0);" class="mob_logo color_text"><i class="far fa-user-circle"></i><span class="account_name">John Doe</span></a>
+                  <span class="product-nav-small dropdown">
+                                          <div class="product_nav_small_btn no_display"><button class="dropbtn">Menu</button></div>
+                                          <ul class="navbar_list_ul navbar_list_wrap dropdown_content"> 
+                                              <li class="navbar_list_li nav_list_none"><a class="nav_top_text color_text" href="javascript:void(0);">Suppourt</a></li>
+                                              <li class="navbar_list_li nav_list_none"><a class="nav_top_text color_text" href="javascript:void(0);">Community</a></li>
+                                              <li class="navbar_list_li"><a class="nav_top_text color_text" href="javascript:void(0);"onclick="show('div1')">Logout</a></li>
+                                             
+                                          </ul>
+                                          </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- sec-2 -->
+        <div class="container_wrap bg_color color_text_2" style="padding-top:74px;">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="sec2_wrap">
+                  <div class="profile_card_wrap">
+                    <div class="col-md-2 col-sm-6 col-xs-6 card_name_pic "><img src="./img/john_d.png"></div>
+                    <div class="col-md-2 col-sm-6 col-xs-6 card_name_info ">
+                      <h3>John Doe <i class="fa-certificate fas fa-badge-check"></i></h3>
+                      <div>Senior Manager</div>
+                      <div>M, 30yrs</div>
+                    </div>
+                    <div class="col-md-2 col-sm-6 col-xs-6 text_center">
+                      <h2>1121</h2>
+                      <div class="color_text_3">Followers</div>
+                    </div>
+                    <div class="col-md-2 col-sm-6 col-xs-6 text_center">
+                      <h2>5,121</h2>
+                      <div class="color_text_3">Following</div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+                      <div class="send_btn_wrap text_center">
+                        <div class="msg_btn color_text bg_color_2" style="margin-bottom: 10px;">Send Message</div>
+                        <div class="msg_btn color_text_2">Add Friend</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- sec-3 -->
+        <div class="container_wrap" style="margin:12px 0px;">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3 col-sm-12 col-xs-12">
+                <div class="events_wrap bg_color" style="border-radius:4px;">
+                  <div class="event_head">Popular Events</div>
+                  <div class="events_cont_wrap">
+                    <img src="./img/holiday.png" alt="holiday">
+                    <span>Holidays Bookings</span>
+                  </div>
+                  <div class="events_cont_wrap">
+                    <img src="./img/eventr.png" alt="holiday">
+                    <span>Seminar Bookings</span>
+                  </div>
+                  <div class="events_cont_wrap">
+                    <img src="./img/yoga.png" alt="holiday">
+                    <span>Yoga Bookings</span>
+                  </div>
+                  <div class="events_cont_wrap">
+                    <img src="./img/music.png" alt="holiday">
+                    <span>Music Bookings</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-9 col-sm-12 col-xs-12">
+                <div class="news_feed_wrap bg_color">
+                  <div class="news_feed">
+  
+                    <div class="news_feed_pic float_left"><img src="./img/john_d.png"></div>
+  
+                    <div class="news_feed_text float_left">
+                      <div>John Doe</div>
+                      <div class="color_text_3" style="font-size:12px;">3 min ago</div>
+                    </div>
+  
+                  </div>
+                  <div class="work_title color_text_2"><b>Senior Manager</b></div>
+                  <div style="margin: 18px 0px;">
+                    <span class="full_time_btn color_text bg_color_2">Full Time</span>
+                    <span class="color_text_3">$30/hr</span>
+                  </div>
+                  <p class="color_text_3" style="margin: 28px 0px;">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.....<span class="color_text_2">View</span></p>
+                  <div class="card_profile_skills" style="border-bottom: 1px solid #dddddd;padding-bottom: 24px;">
+                    <span class="full_time_btn color_text bg_color_2">HTML</span>
+                    <span class="full_time_btn color_text bg_color_2">CSS</span>
+                    <span class="full_time_btn color_text bg_color_2">PHP</span>
+                    <span class="full_time_btn color_text bg_color_2">JAVA</span>
+                  </div>
+                  <div style="padding-top:19px;"><span class="profile_like"><i class="far fa-thumbs-up"></i>Like</span><span class="profile_comment"><i class="fas fa-comment-alt"></i>Comment</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- sec-4 -->
+        <div class="container_wrap bg_color">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="hover03 column hover_col_wrap">
+                  <h3>Last Photos</h3>
+                  <div class="hover_container">
+                    <figure><img src="https://picsum.photos/300/200?image=244" /></figure>
+                    <span>Hover</span>
+                  </div>
+                  <div class="hover_container">
+                    <figure><img src="https://picsum.photos/300/200?image=1024" /></figure>
+                    <span>Hover</span>
+                  </div>
+                  <div class="hover_container">
+                    <figure><img src="https://picsum.photos/300/200?image=611" /></figure>
+                    <span>Hover</span>
+                  </div>
+                </div>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--sec-5  -->
+        <div class="container_wrap">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="padding_section">
+                  <div class="slide-block-sl premium-pack">
+                    <a href="javascript:void(0);" class="kk_slider_blocks">
+                      <div class="slider_title news_feed">
+                        <img src="./img/card_picg.png">
+                        <div><b>Elon Doe</b>
+                          <br/><span class="color_text_3">Graphic Designer</span></div>
+                        <div><span class="friends_btn_follow">follow</span><span class="friends_btn_hire">Hire</span></div>
+                        <div style="padding: 10px 0px 0px 0px;border-top: 1px solid #dddddd;margin-top: 10px;">View</div>
+                      </div>
+  
+                    </a>
+                    <a href="javascript:void(0);" class="kk_slider_blocks">
+                      <div class="slider_title news_feed">
+                        <img src="./img/card_picg.png">
+                        <div><b>Elon Doe</b>
+                          <br/><span class="color_text_3">Graphic Designer</span></div>
+                        <div><span class="friends_btn_follow">follow</span><span class="friends_btn_hire">Hire</span></div>
+                        <div style="padding: 10px 0px 0px 0px;border-top: 1px solid #dddddd;margin-top: 10px;">View</div>
+                      </div>
+  
+                    </a>
+                    <a href="javascript:void(0);" class="kk_slider_blocks">
+                      <div class="slider_title news_feed">
+                        <img src="./img/card_picg.png">
+                        <div><b>Elon Doe</b>
+                          <br/><span class="color_text_3">Graphic Designer</span></div>
+                        <div><span class="friends_btn_follow">follow</span><span class="friends_btn_hire">Hire</span></div>
+                        <div style="padding: 10px 0px 0px 0px;border-top: 1px solid #dddddd;margin-top: 10px;">View</div>
+                      </div>
+  
+                    </a>
+                    <a href="javascript:void(0);" class="kk_slider_blocks">
+                      <div class="slider_title news_feed">
+                        <img src="./img/card_picg.png">
+                        <div><b>Elon Doe</b>
+                          <br/><span class="color_text_3">Graphic Designer</span></div>
+                        <div><span class="friends_btn_follow">follow</span><span class="friends_btn_hire">Hire</span></div>
+                        <div style="padding: 10px 0px 0px 0px;border-top: 1px solid #dddddd;margin-top: 10px;">View</div>
+                      </div>
+  
+                    </a>
+                    <a href="javascript:void(0);" class="kk_slider_blocks">
+                      <div class="slider_title news_feed">
+                        <img src="./img/card_picg.png">
+                        <div><b>Elon Doe</b>
+                          <br/><span class="color_text_3">Graphic Designer</span></div>
+                        <div><span class="friends_btn_follow">follow</span><span class="friends_btn_hire">Hire</span></div>
+                        <div style="padding: 10px 0px 0px 0px;border-top: 1px solid #dddddd;margin-top: 10px;">View</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--footer  -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="float-left" style="float:left;margin-top: 8px; color:#757575;font-weight: 600;">©&nbsp;2018 Technologies (P) Ltd, All Rights Reserved.</div>
+          <div class="float-right kk_subscription footer_links" style="float:right;">
+            <span class="hide_text" style="color:#fff;">Connect with us:</span>
+            <a href="https://www.facebook.com/Kopykitab" target="_blank" title="Facebook"><img class="kk_footer_img" src="https://content.kopykitab.com/catalog/view/theme/bt_bookstore/css/kk_grid/img/fb.png" alt="Facebook"></a>
+            <a href="https://in.linkedin.com/company/kopykitab.com" target="_blank" title="LinkedIn"><img class="kk_footer_img" src="https://content.kopykitab.com/catalog/view/theme/bt_bookstore/image/footer/linkdin.png" alt="LinkedIn"></a>
+            <a href="https://www.youtube.com/channel/UCVy2STS5LnkTZiYgbhEQ_rw" target="_blank" title="YouTube"><img class="kk_footer_img" src="https://content.kopykitab.com/catalog/view/theme/bt_bookstore/image/footer/youtube.png" alt="YouTube"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+  
+  
+    <script src="https://content.kopykitab.com/catalog/view/theme/new/resource/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer="defer"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- <script>
+       function show(div1,div2,div3)
+          {
+              document.getElementById(div1).style.display = "block";
+               document.etElementById(div2).style.display = "none";
+               document.getElementById(div3).style.display = "none";
+          }
+      </script> -->
+  
+  
+    <script>
+      var currentDiv = document.getElementById("div1");
+  
+      function show(divID) {
+  
+        var div = document.getElementById(divID);
+  
+        currentDiv.style.display = "none";
+        div.style.display = "block";
+  
+        currentDiv = div;
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+        $('.slide-block-sl').slick({
+          dots: false,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          variableWidth: true
+        });
+      });
+    </script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+  </body>
+</html>            
